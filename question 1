@@ -1,0 +1,21 @@
+package javaapplication12;
+
+/**
+ *
+ * @author hezer
+ */
+public class JavaApplication12 {
+
+    /*Lambda ile Toplama İşlemi
+Bir Functional Interface olan Calculator'ı oluştur ve içinde int calculate(int a, int b); metodunu tanımla.
+Ardından, bir lambda ifadesi kullanarak bu metodu a + b işlemini gerçekleştirecek şekilde uygula.*/
+    @FunctionalInterface
+    interface Calculator{
+        int calculate(int a, int b);
+    }
+    public static void main(String[] args) {
+        Calculator lambda =(a,b)->a+b;
+        System.out.println(lambda.calculate(4, 60));
+    }
+    
+}
