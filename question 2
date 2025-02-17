@@ -1,0 +1,20 @@
+/**
+ *
+ * @author hezer
+ * Method Reference ile String Uzunluğu
+Bir Function<String, Integer> fonksiyonel arayüzü kullanarak bir String'in uzunluğunu bulan bir method reference yaz.
+
+Örneğin, "Java" girişi için sonuç 4 olmalıdır.
+
+💡 İpucu: String::length method reference'ını kullanabilirsin.
+ */
+
+public class NewClass {
+    @FunctionalInterface
+    interface Function<T,R>{
+        R apply(T t); 
+    }
+    public static void main(String[] args){
+        Function<String,Integer> f1 = String::length;
+        System.out.println(f1.apply("Canım Kendim"));
+    }
