@@ -1,0 +1,25 @@
+import java.util.Arrays;
+import java.util.List;
+
+/**
+ *
+ * @author hezer
+ *  Lambda ile Listeyi Filtreleme
+Bir List<String> içinde "Java" kelimesini içeren elemanları filtreleyen bir lambda ifadesi yaz.
+
+Örneğin, giriş:
+List<String> list = Arrays.asList("Java", "Python", "JavaScript", "C++", "Kotlin");
+Çıktı:
+JavaScript
+💡 İpucu: stream() ve filter() metodlarını kullanabilirsin.
+ */
+public class NewClass1 {
+    @FunctionalInterface
+    interface Selector{
+        String Bul(List<String> s);
+    }
+    public static void main(String[] args){
+       List<String> lang= Arrays.asList("Java","Phyton","JavaScript","C++","Kotlin");
+       lang.stream().filter(name->name.contains("Java")).forEach(System.out::println);
+    }
+}
